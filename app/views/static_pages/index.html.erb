@@ -9,23 +9,17 @@
   </div>
 </div>
 <!-- /////////////////////////end Panel//////////////////////// -->
-<% i = 0 %>
-<% @projects.each do |p| %>
-  <% i += 1 %>
-  <% if i == 1 %>
-    <div class="row">
+<div class="row">
+  <% @projects.each do |p| %>
+    <%= link_to static_pages_index_path(id: "#{p.id}"), remote: true do %>
+      <div class="col s6 m3">
+        <%= image_tag(p.thumb, alt: '') %>
+        <%= "<p><strong>#{p.title}</strong></p>".html_safe %>
+      </div>
+    <% end %>
   <% end %>
-  <%= link_to static_pages_load_desc_path, remote: true, data: {id: p.id} do %>
-    <div class="col s4">
-      <%= image_tag(p.thumb.url(), alt: '') %>
-      <%= "<p><strong>#{p.title}</strong></p>".html_safe %>
-    </div>
-  <% end %>
-  <% if i == 4 %>
-    </div>
-    <% i = 0 %>
-  <% end %>
-<% end %>
+</div>
+<div id="details" class="row"></div>
   <!-- ///////////////////start  panel downloadable////////////////// -->
     <div class="row">
       <div class="col s4">
