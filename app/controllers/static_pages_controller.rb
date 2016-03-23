@@ -9,4 +9,10 @@ class StaticPagesController < ApplicationController
       format.js
     end
   end
+
+  def close_details
+    respond_to do |format|
+      format.js
+    end
+  end
 end
