@@ -1,8 +1,9 @@
+<br>
 <div class='col s8'>
   <%= image_tag(@project.img.url(), class: "responsive-img") %>
 </div>
 <div class="col s4">
-  <%= "<h2>#{@project.title}</h2>".html_safe %>
+  <%= "<h2 class=\"white-text\">#{@project.title}</h2>".html_safe %>
   <%= "#{@project.description}".html_safe %>
   <%= link_to @project.url, target: '_blank', class: 'waves-effect waves-light btn' do %>
     <i class="fa fa-github-alt left"></i> Repository
@@ -11,3 +12,4 @@
     <i class="material-icons left">close</i> Close
   <% end %>
 </div>
+<br>

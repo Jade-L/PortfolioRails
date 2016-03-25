@@ -19,12 +19,14 @@ body {
    display: flex;
    min-height: 100vh;
    flex-direction: column;
-   background: #212121;
+   background-image: url(http://img1.mxstatic.com/wallpapers/7c808947fc79dee5faa52d4ceefe8475_large.jpeg);
+   background-size: cover;
+   background-repeat: no-repeat;
  }
-
- main {
-   flex: 1 0 auto;
- }
+   //
+   // main {
+   //   flex: 1 0 auto;
+   // }
 
 .nav-wrapper {
   background-color: #671914;
